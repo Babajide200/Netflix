@@ -58,15 +58,49 @@ GitHub	Documentation and project sharing
 
 # Business Questions Answered
 
-What is the ratio of TV Shows to Movies on Netflix?
+# What type of content dominates Netflix's library — Movies or TV Shows?
 
-Which countries contribute the most content to Netflix’s library?
+Visualization Used: Donut or bar chart showing the count or percentage of Movies vs. TV Shows.
 
-How have content releases changed over the years?
+Business Insight: Helps content strategists and marketers understand where to focus—series or films.
 
-What genres dominate the platform?
+# How has Netflix’s content catalog grown over the years?
 
-Which ratings are most common, and what do they suggest about audience targeting?
+Visualization Used: Line or area chart showing content added per year.
+
+Business Insight: Reveals growth phases, production trends, or strategic shifts (e.g., pandemic-driven spikes).
+
+# Which countries produce the most content on Netflix?
+
+Visualization Used: Tree map, bar chart, or map visual showing top contributing countries.
+
+Business Insight: Helps stakeholders understand Netflix’s global content acquisition strategy and localization trends.
+
+# What are the most common content ratings on Netflix?
+
+Visualization Used: Bar chart of rating categories (e.g., TV-MA, PG-13, R, etc.)
+
+Business Insight: Indicates the target audience and whether Netflix favors family-friendly vs. mature content.
+
+# What are the most popular or frequent genres on Netflix?
+
+Visualization Used: Bar or stacked column chart based on listed_in (genres) frequency.
+
+Business Insight: Assists in genre-level content planning—e.g., should Netflix invest more in thrillers, comedies, or documentaries?
+
+# What is the average duration of content on Netflix?
+
+Visualization Used: Distribution chart for movie durations or average length metrics for series.
+
+Business Insight: Provides perspective on content consumption patterns (short-form vs long-form).
+
+# Which directors or actors appear most frequently?
+
+Visualization Used: Top 10 list (optional visual)
+
+Business Insight: Shows collaboration trends, brand associations, and possible biases in casting or production.
+
+
 
 # Summary
 
