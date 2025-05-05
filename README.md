@@ -65,3 +65,29 @@ How have content releases changed over the years?
 What genres dominate the platform?
 
 Which ratings are most common, and what do they suggest about audience targeting?
+
+# Summary
+
+Sure! Here’s a polished, professional summary of your Netflix Power BI project without referencing the STAR method explicitly:
+
+---
+
+I independently worked on a Netflix dataset to uncover insights using data storytelling and business intelligence techniques. 
+
+The goal was to develop an interactive Power BI dashboard that analyzes key aspects of Netflix's content library,
+
+including content types, viewer ratings, country of origin, and yearly trends.
+
+Using Power Query, I cleaned and transformed the dataset to ensure accuracy and consistency. 
+
+I then built custom DAX measures to track performance indicators such as total titles,
+
+distribution by type, top contributing countries, rating breakdowns, and genre trends. 
+
+The dashboard was designed with user interactivity in mind—featuring slicers, filters, 
+
+and clear visuals to help users explore insights from multiple perspectives.
+
+The result is a dynamic, professional-grade report that enables stakeholders to understand Netflix’s content strategy at a glance. 
+
+It demonstrates practical skills in data modeling, visualization, and insight delivery, aligning closely with real-world business intelligence use cases.
