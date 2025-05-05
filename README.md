@@ -37,7 +37,8 @@ GitHub	Documentation and project sharing
 **Genre Frequency**    -        Most common genres  
 **Content Over Time**  -       Annual content release trend  
 
-![Netflix](https://github.com/user-attachments/assets/1b873956-15c1-4d8c-b3d6-3bf3d8313b6d)
+![Netflix](https://github.com/user-attachments/assets/bb368c60-4c3a-41a9-8155-5211828907eb)
+
 
 # Business Questions Answered
 What is the ratio of TV Shows to Movies on Netflix?
