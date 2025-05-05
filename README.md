@@ -36,3 +36,12 @@ GitHub	Documentation and project sharing
 **Ratings Breakdown**  -     Most frequent viewer ratings  
 **Genre Frequency**    -        Most common genres  
 **Content Over Time**  -       Annual content release trend  
+
+![Netflix](https://github.com/user-attachments/assets/1b873956-15c1-4d8c-b3d6-3bf3d8313b6d)
+
+# Business Questions Answered
+What is the ratio of TV Shows to Movies on Netflix?
+Which countries contribute the most content to Netflix’s library?
+How have content releases changed over the years?
+What genres dominate the platform?
+Which ratings are most common, and what do they suggest about audience targeting?
