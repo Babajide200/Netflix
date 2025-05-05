@@ -29,11 +29,10 @@ GitHub	Documentation and project sharing
 
 # Key KPIs & Insights
 
-# KPI	                 # Description
-Total Titles	        Total number of content items on Netflix
-Content Type	        Proportion of Movies vs TV Shows
-
-Top 10                Countries	Countries producing the most content
-Ratings               Breakdown	Most frequent viewer ratings
-Genre                 Frequency	Most common genres
-Content               Over Time	Annual content release trend
+# KPI                     # Description
+**Total Titles**          Total number of content items on Netflix  
+**Content Type**          Proportion of Movies vs TV Shows  
+**Top 10 Countries**      Countries producing the most content  
+**Ratings Breakdown**     Most frequent viewer ratings  
+**Genre Frequency**       Most common genres  
+**Content Over Time**     Annual content release trend  
