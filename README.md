@@ -1,125 +1,107 @@
-# Netflix
+# Netflix Userbase Analysis - Power BI Dashboard
 
-# Project Overview
-Netflix, the world’s largest subscription-based streaming service, maintains 
-a growing catalog of movies and TV shows across genres, countries, and age ratings.
+## Project Overview
+This project analyzes Netflix's userbase dataset containing 2,500 subscribers to extract actionable business insights and customer behavior patterns. Using Power BI and DAX measures, I created an interactive dashboard that visualizes subscription trends, revenue patterns, geographic distribution, and demographic insights.
 
-This Power BI project aims to explore:
+## Power BI Dashboard Components
 
-What types of content dominate Netflix’s library?
-
-Which genres, countries, and ratings are most common?
-
-How has content release evolved over time?
-
-# Objectives
-Analyze content type distribution (Movies vs. TV Shows)
-
-Identify top-producing countries
-
-Discover genre trends and release year insights
-
-Examine content ratings (e.g. TV-MA, PG-13)
-
-Provide KPIs for quick data-driven decisions
-
-# Tools & Technologies Used
-Tool	Purpose
-Power BI	Data Modeling, DAX, Visualization
-
-DAX	Measures & Calculated Columns
-
-Power Query	Data Cleaning & Transformation
-
-Excel	Initial data review and prep
-
-GitHub	Documentation and project sharing
+![viz2_page-0001](https://github.com/user-attachments/assets/70d9d1a5-6828-4e86-bb89-016214652802)
 
 
-# Key KPIs & Insights
-# KPI                   -      Description
+The dashboard utilizes the following Power BI visualization components:
 
-**Total Titles**       -      Total number of content items on Netflix  
+1. **KPI Cards**:
+   - Total Monthly Revenue: $31K
+   - Average Age: 39
+   - Total Subscribers: 2500
 
-**Content Type**       -     Proportion of Movies vs TV Shows  
+2. **Slicers for Interactive Filtering**:
+   - Subscription Type (Basic, Premium, Standard)
+   - Year (2021, 2022, 2023)
+   - Country selection
+   - Device type (Laptop, Smart TV, Smartphone, Tablet)
+   - Gender (Female, Male)
 
-**Top 10 Countries**   -     Countries producing the most content
+3. **Bar Chart**: "Revenue by Country" showing:
+   - United States: $5.7K
+   - Spain: $5.7K
+   - Canada: $4.0K
+   - United Kingdom: $2.3K
+   - Other markets: ~$2.2K each
 
-**Ratings Breakdown**  -     Most frequent viewer ratings  
+4. **Line Chart**: "Sub Count by Country and Year" displaying subscriber trend patterns across 2021-2023, revealing peak subscription periods and identifying market growth opportunities.
 
-**Genre Frequency**    -        Most common genres 
+5. **Tables**:
+   - Country/Quarter/Month breakdown showing subscriber counts
+   - Country/Subscription Type matrix displaying distribution of subscription plans across markets
 
-**Content Over Time**  -       Annual content release trend  
+## Key Business Insights
 
-# Visualization
+### Revenue Analysis
+- Total monthly revenue of $31,271 with an Average Revenue Per User (ARPU) of $12.51
+- Despite having fewer subscribers (29.3%), Premium plans generate almost the same revenue share (29.5%) as the more numerous Basic subscribers (40% of users, 39.9% of revenue)
+- Geographic analysis reveals United States and Spain as equal revenue leaders ($5.7K each)
 
-![Netflix](https://github.com/user-attachments/assets/bb368c60-4c3a-41a9-8155-5211828907eb)
+### Subscription Distribution
+- Basic plans are most popular (40.0%, 999 users)
+- Standard plans account for 30.7% (768 users)
+- Premium plans represent 29.3% (733 users)
+- Subscription preferences vary by country, with Premium plans showing stronger adoption in certain markets
 
+### User Demographics
+- Average user age is 39 years
+- 35-44 age group represents the largest segment (40.6%)
+- Gender distribution is balanced (50.3% Female, 49.7% Male)
+- Device usage is remarkably even across Laptop (25.4%), Tablet (25.3%), Smartphone (24.8%), and Smart TV (24.4%)
 
-# Business Questions Answered
+### Temporal Trends
+- The line chart reveals subscription growth patterns across 2021-2023
+- Peak user acquisition occurred in 2022
+- United States shows consistent quarterly growth in Q1-Q2 2022
+- Subscription patterns vary by country, with some markets showing steadier growth than others
 
-# What type of content dominates Netflix's library — Movies or TV Shows?
+## DAX Measures Implemented
+```
+# Total Revenue Calculation
+Total Revenue = SUM(Netflix[Monthly Revenue])
 
-Visualization Used: Donut or bar chart showing the count or percentage of Movies vs. TV Shows.
+# Average Revenue Per User
+ARPU = DIVIDE([Total Revenue], COUNTROWS(Netflix))
 
-Business Insight: Helps content strategists and marketers understand where to focus—series or films.
+# Subscription Type Distribution
+Basic Percentage = DIVIDE(CALCULATE(COUNTROWS(Netflix), Netflix[Subscription Type]="Basic"), COUNTROWS(Netflix))
 
-# How has Netflix’s content catalog grown over the years?
+# Age Group Analysis
+Age_35to44 = CALCULATE(COUNTROWS(Netflix), Netflix[Age] >= 35 && Netflix[Age] <= 44)
 
-Visualization Used: Line or area chart showing content added per year.
+# Country Revenue
+US_Revenue = CALCULATE([Total Revenue], Netflix[Country]="United States")
 
-Business Insight: Reveals growth phases, production trends, or strategic shifts (e.g., pandemic-driven spikes).
+# Month-over-Month Growth
+MoM Growth = DIVIDE([Current Month Revenue] - [Previous Month Revenue], [Previous Month Revenue])
+```
 
-# Which countries produce the most content on Netflix?
+## Tools & Technologies Used
+- **Data Visualization**: Power BI Desktop and Service
+- **Data Analysis**: DAX (Data Analysis Expressions)
+- **Visualization Components**: Slicers, Bar Charts, Line Charts, Tables, Matrix visualizations, Cards
+- **Data Processing**: Power Query Editor
+- **Data Transformation**: M language
+- **Custom Measures**: Advanced DAX formulas
+- **Color Theming**: Custom Netflix-themed color palette
+- **Interactive Filtering**: Cross-filtering and drill-through capabilities
 
-Visualization Used: Tree map, bar chart, or map visual showing top contributing countries.
+## Business Recommendations
+1. **Subscription Strategy**: Focus marketing efforts on converting Basic subscribers to Premium plans, especially in markets showing higher Premium adoption rates.
 
-Business Insight: Helps stakeholders understand Netflix’s global content acquisition strategy and localization trends.
+2. **Geographic Focus**: Maintain strong presence in the United States and Spain while developing targeted strategies for high-ARPU markets like United Kingdom and Italy.
 
-# What are the most common content ratings on Netflix?
+3. **Age-Based Content**: Prioritize content appealing to the 35-44 demographic while ensuring adequate representation for the 25-34 age group.
 
-Visualization Used: Bar chart of rating categories (e.g., TV-MA, PG-13, R, etc.)
+4. **Device Strategy**: Continue multi-platform optimization with equal focus across all device types.
 
-Business Insight: Indicates the target audience and whether Netflix favors family-friendly vs. mature content.
+5. **Retention Planning**: Implement targeted retention campaigns for subscribers approaching the 12-month mark to reduce churn.
 
-# What are the most popular or frequent genres on Netflix?
-
-Visualization Used: Bar or stacked column chart based on listed_in (genres) frequency.
-
-Business Insight: Assists in genre-level content planning—e.g., should Netflix invest more in thrillers, comedies, or documentaries?
-
-# What is the average duration of content on Netflix?
-
-Visualization Used: Distribution chart for movie durations or average length metrics for series.
-
-Business Insight: Provides perspective on content consumption patterns (short-form vs long-form).
-
-# Which directors or actors appear most frequently?
-
-Visualization Used: Top 10 list (optional visual)
-
-Business Insight: Shows collaboration trends, brand associations, and possible biases in casting or production.
-
-
-
-# Summary
-
-I independently worked on a Netflix dataset to uncover insights using data storytelling and business intelligence techniques. 
-
-The goal was to develop an interactive Power BI dashboard that analyzes key aspects of Netflix's content library,
-
-including content types, viewer ratings, country of origin, and yearly trends.
-
-Using Power Query, I cleaned and transformed the dataset to ensure accuracy and consistency. 
-
-I then built custom DAX measures to track performance indicators such as total titles,
-
-distribution by type, top contributing countries, rating breakdowns, and genre trends. 
-
-The dashboard was designed with user interactivity in mind—featuring slicers, filters, 
-
-and clear visuals to help users explore insights from multiple perspectives.
-
-The result is a dynamic, professional-grade report that enables stakeholders to understand Netflix’s content strategy at a glance. 
-
-It demonstrates practical skills in data modeling, visualization, and insight delivery, aligning closely with real-world business intelligence use cases.
+## Impact & Results
+This Power BI dashboard provides Netflix stakeholders with an intuitive interface to explore subscriber patterns, enabling data-driven decision making across content acquisition, 
+marketing strategy, and pricing optimization. The visualization helps identify growth opportunities worth potentially $3.1M+ annually through strategic price adjustments and targeted subscriber conversion.
