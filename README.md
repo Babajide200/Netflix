@@ -62,24 +62,17 @@ The dashboard utilizes the following Power BI visualization components:
 
 ## DAX Measures Implemented
 ```
-# Total Revenue Calculation
-Total Revenue = SUM(Netflix[Monthly Revenue])
+# Sub Count = COUNT('Netflix Userbase'[User ID])
 
-# Average Revenue Per User
-ARPU = DIVIDE([Total Revenue], COUNTROWS(Netflix))
+# Average Age = AVERAGE('Netflix Userbase'[Age])
 
-# Subscription Type Distribution
-Basic Percentage = DIVIDE(CALCULATE(COUNTROWS(Netflix), Netflix[Subscription Type]="Basic"), COUNTROWS(Netflix))
+# Total Revenue = SUM('Netflix Userbase'[Monthly Revenue])
 
-# Age Group Analysis
-Age_35to44 = CALCULATE(COUNTROWS(Netflix), Netflix[Age] >= 35 && Netflix[Age] <= 44)
+# Date = CALENDAR(MIN('Netflix Userbase'[Join Date]), MAX('Netflix Userbase'[Join Date]))
 
-# Country Revenue
-US_Revenue = CALCULATE([Total Revenue], Netflix[Country]="United States")
+# Day = DAY('Date'[Date].[Date])
 
-# Month-over-Month Growth
-MoM Growth = DIVIDE([Current Month Revenue] - [Previous Month Revenue], [Previous Month Revenue])
-```
+# Month = MONTH('Date'[Date].[Date])
 
 ## Tools & Technologies Used
 - **Data Visualization**: Power BI Desktop and Service
