@@ -62,19 +62,19 @@ The dashboard utilizes the following Power BI visualization components:
 
 ## DAX Measures Implemented
 ```
-# Sub Count = COUNT('Netflix Userbase'[User ID])
+ Sub Count = COUNT('Netflix Userbase'[User ID])
 
-# Average Age = AVERAGE('Netflix Userbase'[Age])
+ Average Age = AVERAGE('Netflix Userbase'[Age])
 
-# Total Revenue = SUM('Netflix Userbase'[Monthly Revenue])
+ Total Revenue = SUM('Netflix Userbase'[Monthly Revenue])
 
-# Date = CALENDAR(MIN('Netflix Userbase'[Join Date]), MAX('Netflix Userbase'[Join Date]))
+ Date = CALENDAR(MIN('Netflix Userbase'[Join Date]), MAX('Netflix Userbase'[Join Date]))
 
-# Day = DAY('Date'[Date].[Date])
+ Day = DAY('Date'[Date].[Date])
 
-# Month = MONTH('Date'[Date].[Date])
-
-## Tools & Technologies Used
+ Month = MONTH('Date'[Date].[Date])
+```
+### Tools & Technologies Used
 - **Data Visualization**: Power BI Desktop and Service
 - **Data Analysis**: DAX (Data Analysis Expressions)
 - **Visualization Components**: Slicers, Bar Charts, Line Charts, Tables, Matrix visualizations, Cards
@@ -84,7 +84,7 @@ The dashboard utilizes the following Power BI visualization components:
 - **Color Theming**: Custom Netflix-themed color palette
 - **Interactive Filtering**: Cross-filtering and drill-through capabilities
 
-## Business Recommendations
+### Business Recommendations
 1. **Subscription Strategy**: Focus marketing efforts on converting Basic subscribers to Premium plans, especially in markets showing higher Premium adoption rates.
 
 2. **Geographic Focus**: Maintain strong presence in the United States and Spain while developing targeted strategies for high-ARPU markets like United Kingdom and Italy.
@@ -95,6 +95,6 @@ The dashboard utilizes the following Power BI visualization components:
 
 5. **Retention Planning**: Implement targeted retention campaigns for subscribers approaching the 12-month mark to reduce churn.
 
-## Impact & Results
+### Impact & Results
 This Power BI dashboard provides Netflix stakeholders with an intuitive interface to explore subscriber patterns, enabling data-driven decision making across content acquisition, 
 marketing strategy, and pricing optimization. The visualization helps identify growth opportunities worth potentially $3.1M+ annually through strategic price adjustments and targeted subscriber conversion.
